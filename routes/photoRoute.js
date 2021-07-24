@@ -8,7 +8,6 @@ photoRoute.post('/setProfilePic', userController.upload(process.env.S3_BUCKET_NA
   if (err) { return res.status(400).json({ success: false, message: err.message }); }
 
 }), (req, res, next) => {
-  console.log(req.file);
   res.status(200).json({ data: req.file });
 });
 
