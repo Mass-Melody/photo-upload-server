@@ -3,9 +3,8 @@
 const express = require('express');
 const cors = require('cors');
 const app = express();
-const expressFileUpload = require('express-fileupload');
 
-app.use(cors(), express.json(), expressFileUpload());
+app.use(cors(), express.json());
 
 const photoRouter = require('./routes/photoRoute.js');
 
