@@ -4,7 +4,7 @@ const express = require('express');
 const cors = require('cors');
 const app = express();
 
-app.use(cors(), express.json());
+app.use(cors({ origin: '*' }), express.json());
 
 const photoRouter = require('./routes/photoRoute.js');
 
