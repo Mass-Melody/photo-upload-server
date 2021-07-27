@@ -1,7 +1,7 @@
 const aws = require('aws-sdk');
 const multer = require('multer');
 const multerS3 = require('multer-s3');
-
+const uuid = require('uuid');
 const s3 = new aws.S3({
   accessKeyId: process.env.S3_ACCESS_KEY,
   secretAccessKey: process.env.S3_SECRET,
@@ -22,7 +22,7 @@ exports.upload = (bucketName) =>
       key: function (req, file, cb) {
 
         // file name is for testing purposes only. This will need to be a template literal wired up so that the logged in user's username is associated with the file name. 
-        cb(null, `${new Date().now()}.jpeg`);
+        cb(null, `${uuid()}.jpeg`);
       },
     }),
   });
