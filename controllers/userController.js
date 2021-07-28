@@ -14,13 +14,14 @@ exports.upload = (bucketName) =>
     storage: multerS3({
       s3: s3,
       bucket: bucketName,
+      acl: 'public-read',
       metadata: function (req, file, cb) {
         cb(null, Object.assign({}, file));
       },
       key: function (req, file, cb) {
 
         // file name is for testing purposes only. This will need to be a template literal wired up so that the logged in user's username is associated with the file name. 
-        cb(null, `${uuid()}.jpeg`);
+        cb(null, `${uuid()}.jpg`);
       },
     }),
   });
