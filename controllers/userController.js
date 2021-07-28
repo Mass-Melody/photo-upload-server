@@ -15,8 +15,6 @@ exports.upload = (bucketName) =>
       s3: s3,
       bucket: bucketName,
       metadata: function (req, file, cb) {
-        console.log('req', req);
-        console.log('file', file);
         cb(null, Object.assign({}, file));
       },
       key: function (req, file, cb) {
