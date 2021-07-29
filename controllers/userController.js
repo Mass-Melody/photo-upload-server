@@ -20,7 +20,6 @@ exports.upload = (bucketName) =>
       },
       key: function (req, file, cb) {
 
-        // file name is for testing purposes only. This will need to be a template literal wired up so that the logged in user's username is associated with the file name. 
         cb(null, `${uuid()}.jpg`);
       },
     }),
