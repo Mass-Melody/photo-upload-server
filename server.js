@@ -10,8 +10,6 @@ const photoRouter = require('./routes/photoRoute.js');
 
 app.get('/', (req, res) => res.status(200).json('server is running'));
 
-// http://localhost:7000/api/users/setProfilePic
-
 app.use('/api/users', photoRouter);
 
 const start = (port) => {
