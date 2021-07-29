@@ -2,7 +2,7 @@
 
 ## Purpose of This App
 
-This is a backend application implemented as an API for [Melodi][https://github.com/Mass-Melody/Melodi]. When a user uploads a profile photo, it is sent to this server. The server then posts the user's photo to an Amazon S3 Bucket, and the bucket returns the response to this server. The server then returns the URL of the profile to the front-end app. Upon confirming that the user wants to save all updated profile information (including the profile photo), this url is added to the user's record in Melodi's MongoDB database, which is handled by the [Melodi-db server](https://github.com/Mass-Melody/Melodi-db).
+This is a backend application implemented as an API for [Melodi](https://github.com/Mass-Melody/Melodi). When a user uploads a profile photo, it is sent to this server. The server then posts the user's photo to an Amazon S3 Bucket, and the bucket returns the response to this server. The server then returns the URL of the profile to the front-end app. Upon confirming that the user wants to save all updated profile information (including the profile photo), this url is added to the user's record in Melodi's MongoDB database, which is handled by the [Melodi-db server](https://github.com/Mass-Melody/Melodi-db).
 
 ## Tools Needed / Setup
 
