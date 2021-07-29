@@ -4,7 +4,7 @@
   -- Documentation: https://aws.plainenglish.io/how-to-mock-aws-s3-in-a-jest-unit-test-9adf4ffe2401
 */
 
-const s3 = require('../s3.js');
+const s3 = require('../s3-test.js');
 
 const mockS3Instance = {
   copyObject: jest.fn().mockReturnThis(),
